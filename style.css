@@ -1,8 +1,14 @@
 body {
-  font-family: "DM sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   background-color: #dfdede;
   margin: 0;
   padding: 0;
+}
+
+/* Buttons and inputs don't inherit the page font by default */
+button,
+input {
+  font-family: inherit;
 }
 
 /* Calculator buttons: shared style */
