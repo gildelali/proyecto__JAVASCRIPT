@@ -27,29 +27,11 @@ const $inputResult = document.querySelector("#inputResult");
 
 // Events
 
-// ADDITION
+// FUNCTION ADDITION
 
 $btnAdd.addEventListener("click", () => {
-  console.log("Click");
-  console.log("num1", $num1.value);
-  console.log("num2", $num2.value);
-
-  // convert, validate, calculate and write the result
-  const a = Number($num1.value);
-  const b = Number($num2.value);
-
-  if (
-    $num1.value === "" ||
-    $num2.value === "" ||
-    Number.isNaN(a) ||
-    Number.isNaN(b)
-  ) {
-    $inputResult.value = "Enter two valid numbers";
-    return;
-  }
-
-  // use the add function from functions.js
-  $inputResult.value = add(a, b);
+  const result = add($num1.value, $num2.value);
+  $inputResult.value = result;
 });
 
 // SUBTRACTION
