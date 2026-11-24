@@ -1,3 +1,5 @@
+import { add } from "./functions.js";
+
 // DOM references
 const $h1 = document.querySelector("h1");
 
@@ -26,6 +28,7 @@ const $inputResult = document.querySelector("#inputResult");
 // Events
 
 // ADDITION
+
 $btnAdd.addEventListener("click", () => {
   console.log("Click");
   console.log("num1", $num1.value);
@@ -45,10 +48,12 @@ $btnAdd.addEventListener("click", () => {
     return;
   }
 
-  $inputResult.value = a + b;
+  // use the add function from functions.js
+  $inputResult.value = add(a, b);
 });
 
 // SUBTRACTION
+
 $btnSubtract.addEventListener("click", () => {
   console.log("Click");
   console.log("num1", $num1.value);
@@ -72,6 +77,7 @@ $btnSubtract.addEventListener("click", () => {
 });
 
 //MULTIPLICATION
+
 $btnMultiply.addEventListener("click", () => {
   console.log("Click");
   console.log("num1", $num1.value);
