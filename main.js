@@ -3,6 +3,7 @@ const $h1 = document.querySelector("h1");
 
 $h1.style.color = "green";
 $h1.style.fontSize = "60px";
+$h1.style.fontFamily = "Grotesk, sans-serif";
 
 console.log($h1);
 

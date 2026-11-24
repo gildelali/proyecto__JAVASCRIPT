@@ -1,3 +1,10 @@
+body {
+  font-family: "DM sans", sans-serif;
+  background-color: #dfdede;
+  margin: 0;
+  padding: 0;
+}
+
 /* Calculator buttons: shared style */
 button {
   padding: 8px 16px;
