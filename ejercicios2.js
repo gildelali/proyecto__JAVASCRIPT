@@ -22,8 +22,6 @@
 
 // TODO 1: Selecciona los elementos del DOM.
 
-
-
 // TODO 2: Crea la función sumar.
 
 // TODO 3: Añade el evento click al botón y muestra el resultado.

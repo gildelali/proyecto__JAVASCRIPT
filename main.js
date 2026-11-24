@@ -3,10 +3,6 @@ const $h1 = document.querySelector("h1");
 
 $h1.style.color = "blue";
 $h1.style.fontSize = "60px";
-$h1.style.textAlign = "center";
-$h1.style.textTransform = "uppercase";
-$h1.style.fontFamily = "Montserrat, sans-serif";
-$h1.style.fontWeight = "700";
 
 console.log($h1);
 

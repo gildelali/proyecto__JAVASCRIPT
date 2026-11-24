@@ -14,8 +14,6 @@
 
 // TODO: Escribe aquí la solución del ejercicio 1.
 
-
-
 /**
  * EJERCICIO 2: Describe un producto
  *
@@ -27,7 +25,6 @@
  */
 
 // TODO: Escribe aquí la solución del ejercicio 2.
-
 
 /**
  * EJERCICIO 3: Practica con null y undefined
@@ -41,7 +38,6 @@
 
 // TODO: Escribe aquí la solución del ejercicio 3.
 
+let mivariable = 5;
 
-let mivariable = 5
-
-console.log(mivariable)
+console.log(mivariable);
