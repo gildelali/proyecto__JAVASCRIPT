@@ -1,0 +1,26 @@
+/* Calculator buttons: shared style */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.15);
+}
+
+/* Each button has its own colour */
+#btnAdd {
+  background-color: #2e7d32; /* green */
+}
+
+#btnSubtract {
+  background-color: #c62828; /* red */
+}
+
+#btnMultiply {
+  background-color: #1565c0; /* blue */
+}
