@@ -1,4 +1,4 @@
-import { add } from "./functions.js";
+import { add, subtract, multiply } from "./functions.js";
 
 // DOM references
 const $h1 = document.querySelector("h1");
@@ -27,57 +27,30 @@ const $inputResult = document.querySelector("#inputResult");
 
 // Events
 
-// FUNCTION ADDITION
+// Reads both inputs and runs the given operation.
+// Shows a message instead if either input is empty or not a number.
+function calculate(operation) {
+  const a = Number($num1.value);
+  const b = Number($num2.value);
 
-$btnAdd.addEventListener("click", () => {
-  const result = add($num1.value, $num2.value);
-  $inputResult.value = result;
-});
+  if (
+    $num1.value === "" ||
+    $num2.value === "" ||
+    Number.isNaN(a) ||
+    Number.isNaN(b)
+  ) {
+    $inputResult.value = "Enter two valid numbers";
+    return;
+  }
+
+  $inputResult.value = operation(a, b);
+}
+
+// FUNCTION ADDITION
+$btnAdd.addEventListener("click", () => calculate(add));
 
 // SUBTRACTION
+$btnSubtract.addEventListener("click", () => calculate(subtract));
 
-$btnSubtract.addEventListener("click", () => {
-  console.log("Click");
-  console.log("num1", $num1.value);
-  console.log("num2", $num2.value);
-
-  // convert, validate, calculate and write the result
-  const a = Number($num1.value);
-  const b = Number($num2.value);
-
-  if (
-    $num1.value === "" ||
-    $num2.value === "" ||
-    Number.isNaN(a) ||
-    Number.isNaN(b)
-  ) {
-    $inputResult.value = "Enter two valid numbers";
-    return;
-  }
-
-  $inputResult.value = a - b;
-});
-
-//MULTIPLICATION
-
-$btnMultiply.addEventListener("click", () => {
-  console.log("Click");
-  console.log("num1", $num1.value);
-  console.log("num2", $num2.value);
-
-  // convert, validate, calculate and write the result
-  const a = Number($num1.value);
-  const b = Number($num2.value);
-
-  if (
-    $num1.value === "" ||
-    $num2.value === "" ||
-    Number.isNaN(a) ||
-    Number.isNaN(b)
-  ) {
-    $inputResult.value = "Enter two valid numbers";
-    return;
-  }
-
-  $inputResult.value = a * b;
-});
+// MULTIPLICATION
+$btnMultiply.addEventListener("click", () => calculate(multiply));
