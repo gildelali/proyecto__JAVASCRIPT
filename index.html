@@ -17,19 +17,45 @@
   <body>
     <main>
       <h1>Introduction to JavaScript</h1>
-      <section>
+      <section class="card">
         <h2>Calculator</h2>
-        <h2 id="title2">Calculator Copy</h2>
-        <label for="num1">Number 1</label>
-        <input type="number" id="num1" />
-        <label for="num2">Number 2</label>
-        <input type="number" id="num2" />
-        <button id="btnAdd">Add</button>
-        <button id="btnSubtract">Subtract</button>
-        <button id="btnMultiply">Multiply</button>
-        <br /><br />
-        <label for="inputResult">Result</label>
-        <input type="text" readonly value="" id="inputResult" />
+
+        <div class="fields">
+          <div class="field">
+            <label for="num1">Number 1</label>
+            <input type="number" id="num1" />
+          </div>
+          <div class="field">
+            <label for="num2">Number 2</label>
+            <input type="number" id="num2" />
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="btnAdd">Add</button>
+          <button id="btnSubtract">Subtract</button>
+          <button id="btnMultiply">Multiply</button>
+        </div>
+
+        <div class="field">
+          <label for="inputResult">Result</label>
+          <input type="text" readonly value="" id="inputResult" />
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Superhero API</h2>
+        <div class="search">
+          <input
+            type="text"
+            id="txtSearchHero"
+            placeholder="Search a hero, e.g. Batman"
+            aria-label="Hero name"
+          />
+          <button id="btnSearchHero">Search</button>
+        </div>
+        <p id="searchMessage" class="message" aria-live="polite"></p>
+        <div id="heroResults" class="hero-results"></div>
       </section>
     </main>
   </body>
